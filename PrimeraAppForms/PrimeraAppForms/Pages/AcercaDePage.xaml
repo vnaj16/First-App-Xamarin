@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Acerca De" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:PrimeraAppForms.ViewModel"
+             x:Class="PrimeraAppForms.Pages.AcercaDePage">
+    <ContentPage.BindingContext>
+        <vm:AcercaDeViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20">
+                <Label Text="{Binding Version, StringFormat = 'MiPrimeraapp{0}'}"/>
+                <BoxView HeightRequest=".5" Margin="0,0,0,5"/> 
+                <Grid Margin="0,0,0,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Versión App" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="{Binding Version}" Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="Nombre del Dispositivos" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="{Binding NombreDispositivo}" Grid.Row="1" Grid.Column="1"/>
+                    <Label Text="Fabricante de dispositivo" Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="{Binding FabricanteDispositivo}" Grid.Row="2" Grid.Column="1"/>
+                    <Label Text="Modelo de dispositivo" Grid.Row="3" Grid.Column="0"/>
+                    <Label Text="{Binding ModeloDispositivo}" Grid.Row="3" Grid.Column="1"/>
+                    <Label Text="Verion S.O." Grid.Row="4" Grid.Column="0"/>
+                    <Label Text="{Binding VersionSO}" Grid.Row="4" Grid.Column="1"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

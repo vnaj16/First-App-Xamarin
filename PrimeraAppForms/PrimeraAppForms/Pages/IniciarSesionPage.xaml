@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Inicio de Sesion" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:PrimeraAppForms.ViewModel"
+             x:Class="PrimeraAppForms.Pages.IniciarSesionPage">
+    <ContentPage.BindingContext>
+        <vm:InicioDeSesionViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Padding="20,100,20,0">
+            <Label Margin="0,0,0,30" Text="Bienvenido a la aplicacion de la Academia SCJ" TextColor="Gray" HorizontalOptions="Center"/>
+            <Label Text ="Inicio de sesión" TextColor="Gray" FontSize="20" HorizontalOptions="Center"/>
+            <Entry Placeholder="Correo electrónico" Keyboard="Email"/>
+            <Entry Placeholder="Contraseña" IsPassword="True"/>
+            <StackLayout Orientation="Horizontal">
+                <Switch OnColor="Cyan" ThumbColor="DarkBlue"/>
+                <Label Text="Mantener sesión iniciada"/>
+            </StackLayout>
+            <Button HorizontalOptions="Center" Text="Iniciar sesión" TextColor="White" BackgroundColor="#FFA733" BorderRadius="15" BorderColor="White" BorderWidth="2" WidthRequest="200" Command="{Binding IniciarComando}"/>
+            <ActivityIndicator HeightRequest="30" HorizontalOptions="CenterAndExpand"/>
+            <Button Text="Regístrate" TextColor="Gray" BackgroundColor="Transparent"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

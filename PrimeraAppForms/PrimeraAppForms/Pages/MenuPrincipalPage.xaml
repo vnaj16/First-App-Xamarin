@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Menu" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:vm="clr-namespace:PrimeraAppForms.ViewModel"
+             x:Class="PrimeraAppForms.Pages.MenuPrincipalPage">
+    <ContentPage.BindingContext>
+        <vm:MenuPrincipalViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="20,100,20,0">
+            <Button Margin="0,5,0,5" Text="Ubicación" Command="{Binding UbicacionComando}"/>
+            <Button Margin="0,5,0,5" Text="Cámara" Command="{Binding CamaraComando}"/>
+            <Button Margin="0,5,0,5" Text="Directorio" Command="{Binding DirectorioCommando}"/>
+            <Button Margin="0,5,0,5" Text="Acerca de" Command="{Binding AcercaDeComando}"/>
+            <Button Margin="0,5,0,5" Text="Salir" Command="{Binding SalirComando}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
